@@ -2,31 +2,26 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #2f3b2f;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-
-    h1 {
-      font-size: 60px;
-      border: 3px solid white;
-      padding: 20px 40px;
-      border-radius: 12px;
-      background: rgba(255,255,255,0.1);
-    }
-  </style>
+  <title>Chat commun</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Hello World 👋</h1>
+<div id="login">
+  <h2>Choisis un pseudo</h2>
+  <input id="name" placeholder="Pseudo">
+  <button onclick="enter()">Entrer</button>
+</div>
 
+<div id="chat" class="hidden">
+  <div id="messages"></div>
+
+  <div id="inputBox">
+    <input id="msg" placeholder="Message...">
+    <button onclick="send()">Envoyer</button>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
 </body>
 </html>
